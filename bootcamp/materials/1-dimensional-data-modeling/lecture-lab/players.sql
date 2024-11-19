@@ -26,6 +26,3 @@ CREATE TYPE scoring_class AS
 	 years_since_last_active INTEGER,
      PRIMARY KEY (player_name, current_season)
  );
-
-
-
