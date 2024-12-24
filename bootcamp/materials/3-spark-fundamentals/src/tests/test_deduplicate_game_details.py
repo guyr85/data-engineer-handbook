@@ -5,7 +5,7 @@ GameDetails = namedtuple("GameDetails", "game_id team_id player_id")
 DeduplicateGameDetails = namedtuple("DeduplicateGameDetails", "game_id team_id player_id")
 
 
-def test_scd_generation(spark):
+def test_deduplicate_game_details(spark):
     source_data = [
         GameDetails(1, 10, 100),
         GameDetails(1, 10, 100),

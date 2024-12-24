@@ -20,7 +20,7 @@ def do_deduplicate_game_details_transformation(spark, dataframe):
 def main():
     spark = SparkSession.builder \
       .master("local") \
-      .appName("players_scd") \
+      .appName("test_deduplicate_game_details_job") \
       .getOrCreate()
     output_df = do_deduplicate_game_details_transformation(spark, spark.table("game_details"))
     output_df.write.mode("overwrite").insertInto("deduplicate_game_details")
